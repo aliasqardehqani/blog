@@ -1,11 +1,11 @@
 # blog
 I want to create a website, for that i start  a project  from (Django3 by example book).
-.
-.
-.
-Chapter 1 
+# .
+# .
+# .
+# Chapter 1 
 
-  Installing Django.
+#  Installing Django.
   Import on git.
   Creating and configuring Django project.
   Creating a django application.
