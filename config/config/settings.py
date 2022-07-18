@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 # from tkinter import E
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -38,9 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     # MyApp
     'blog',
+    'account',
+    'taggit',
 ]
 
 MIDDLEWARE = [
@@ -84,6 +86,14 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+# 'default': {
+#     'ENGINE': 'django.db.backends.postgresql',
+#     'NAME': 'blog',
+#     'USER': 'postgres@aslab',
+#     'PASSWORD': 'Ali783523',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -132,3 +142,11 @@ EMAIL_HOST_USER = 'alierami98@gmail.com'
 EMAIL_HOST_PASSWORD = '19861378'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
