@@ -27,8 +27,7 @@ SECRET_KEY = 'django-insecure-hm*06v$e_ws)@^yoz6392vq)cdagg2!sy2^556r%*54r@!e+$$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['blog-aslab.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -39,10 +38,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     # MyApp
     'blog',
     'account',
+    'images',
+
+    # Packages
     'taggit',
+    'social_django',
+
 ]
 
 MIDDLEWARE = [
@@ -113,7 +118,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = [
 
+    'django.contrib.auth.backends.ModelBackend',
+    'account.authentication.EmailAuthBackend',
+
+]
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
