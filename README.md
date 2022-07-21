@@ -1,7 +1,7 @@
 # blog
 I want to create a website, for that i start  a project  from (Django3 by example book).
 
-# Chapter 1 
+### Chapter 1 
 
 1-  Installing Django.
 2-  Import on git.
@@ -13,3 +13,7 @@ I want to create a website, for that i start  a project  from (Django3 by exampl
 8-  Building views, templates, and URLs.
 9-  Adding pagination to list views.
 10-  Using Django's class-based views.
+
+
+####
+------------------------------------------------------
