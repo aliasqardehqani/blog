@@ -7,7 +7,7 @@ from django.utils.text import slugify
 class ImageCreateForm(forms.ModelForm):
     class Meta:
         model = Image
-        fields = ('title', 'url', 'description')
+        fields = ('title', 'url', 'description', 'image')
         widgets = {
             'url': forms.HiddenInput,
         }
@@ -32,7 +32,7 @@ class ImageCreateForm(forms.ModelForm):
         response = request.urlopen(image_url)
         image.image.save(image_name,
                          ContentFile(response.read()),
-        save=False)
+                         save=False)
         if commit:
             image.save()
         return image
